@@ -1,3 +1,5 @@
+/// Implementation of linked list data structure
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -6,20 +8,6 @@ struct Node{
     int data;
     Node *next;
 };
-
-Node *create_node(int, Node*);
-
-int main()
-{
-    Node *head = NULL;
-
-    Node *n1 = create_node(10, NULL);
-
-    head = n1;
-
-    cout<<head->data<<endl;
-    
-}
 
 Node *create_node(int data, Node* next)
 {
@@ -35,4 +23,19 @@ Node *create_node(int data, Node* next)
 
     return new_node;
 }
+
+int main()
+{
+    Node *head = NULL;
+
+    Node *n1 = create_node(10, NULL);
+
+    head = n1;
+
+    cout<<head->data<<endl;
+
+    return 0;
+}
+
+
 
