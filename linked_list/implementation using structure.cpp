@@ -1,4 +1,4 @@
-/// Implementation of linked list data structure
+/// Implementation of singly linked list data structure
 
 #include<bits/stdc++.h>
 
