@@ -58,7 +58,7 @@ void insert_node(Node *node, int item)
 
 }
 
-Node *remove_node(Node *head, Node *node)
+Node *remove_node(Node *head, Node *node)  /* function for deleting a node in the linked list*/ 
 {
     if(head == node){
         head = head->next;
