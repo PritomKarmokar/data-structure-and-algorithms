@@ -1,3 +1,11 @@
+/*
+Inserting a node in the linked list.
+
+Here we are considering two cases :
+    01.Inserting at head
+    02.Inserting at last node of the linked list.
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -9,7 +17,7 @@ struct Node{
 
 Node *create_node(int item, Node *next)
 {
-    Node *new_node = (Node *)malloc(sizeof(Node));
+    Node *new_node = new Node(); ///Here for allocating memory malloc, calloc and realloc can also be used
 
     if(new_node == NULL){
         cout<<"Error! Could not create a new node!!\n";
@@ -24,7 +32,7 @@ Node *create_node(int item, Node *next)
 
 Node *prepend(Node *head, int item)
 {
-    Node *new_node = create_node(item , head);
+    Node *new_node = create_node(item, head);
 
     return new_node;
 }
@@ -39,38 +47,11 @@ Node *append(Node *head, int item)
 
     Node *current_node = head;
 
-    while(current_node->next !=  NULL){
+    while(current_node->next != NULL){
         current_node = current_node->next;
     }
 
     current_node->next = new_node;
-
-    return head;
-}
-
-void insert_node(Node *node, int item)
-{
-    Node *new_node = create_node(item, node->next);
-
-    node->next = new_node;
-
-}
-
-Node *reverse_linked_list(Node *head)
-{
-    Node *current_node = head;
-
-    Node *next_node;
-
-    Node *prev_node = NULL;
-
-    while(current_node != NULL){
-        next_node = current_node->next;
-        current_node->next = prev_node;
-        prev_node = current_node;
-        current_node = next_node;
-    }
-    head = prev_node;
 
     return head;
 }
@@ -98,16 +79,14 @@ int main()
     Node *head = NULL;
     print_linked_list(head);
 
+    Node *n1 = create_node(10, NULL);
+    head = n1;
+    print_linked_list(head);
+
     head = prepend(head, 20);
     print_linked_list(head);
 
-    insert_node(head, 10);
-    print_linked_list(head);
-
     head = append(head, 30);
-    print_linked_list(head);
-
-    head = reverse_linked_list(head);
     print_linked_list(head);
 
     return 0;
