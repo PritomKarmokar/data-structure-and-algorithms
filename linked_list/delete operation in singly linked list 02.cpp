@@ -71,7 +71,7 @@ Node *search_node(Node *head, int item)    /* Searching any node where the data 
    return current_node;
 }
 
-Node *remove_node(Node *head, int item)
+Node *remove_node(Node *head, int item) /* removing node where the value of the node is given */
 {
     Node *node = search_node(head, item);
 
