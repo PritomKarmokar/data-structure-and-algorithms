@@ -2,7 +2,7 @@
     Selection Sort Algorithm
     Time Complexity: O(n^2)
     Space Complexity: O(1) , because array is not the part of algorithm, it's just the part of the input
-    Advantages: although time complexity is O(n^2) this algorithm works well in sorted list or arrays
+    Advantages: although time complexity is O(n^2) this algorithm works well in short list or arrays
 */
 
 #include<bits/stdc++.h>
