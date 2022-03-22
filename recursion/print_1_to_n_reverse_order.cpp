@@ -5,7 +5,6 @@ void print(int i, int n)
 {   
     // base condition
     if(i > n){
-        cout<<endl;
         return;
     }
 
