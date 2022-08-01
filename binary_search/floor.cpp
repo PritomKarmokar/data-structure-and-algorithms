@@ -8,6 +8,9 @@ using namespace std;
 
 int floor(vector<int> &nums, int target)
 {
+    // If the 'target' number is smaller than the minimum value presented in the array then no floor is found for the targeted value.
+    if(nums[0] > target) return -1;
+
     int start = 0;
     int end = nums.size() - 1;
 
@@ -37,7 +40,10 @@ int main()
 
     int ans = floor(nums, target);
 
-    //cout<<nums[ans]<<endl;
-    cout<<ans<<endl;
+    if(ans == -1) cout<<"Floor is not found\n";
+    else{
+        cout<<nums[ans]<<endl;
+        //cout<<ans<<endl;
+    }
     return 0; 
 }
