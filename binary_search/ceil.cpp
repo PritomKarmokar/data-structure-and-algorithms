@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// ceiling of a number is the smallest element in the array greater than or equal to target
+// ceiling of a number is the 'smallest element in the array greater than or equal' to target
 
 // returning the index of the target value
 // else returning the next big number greater than the target element.
 
 int ceiling(vector<int> &nums, int target)
 {   
-    // If the target number is greater than the greatest element in the array
+    // If the target number is greater than the greatest element in the array then no ceil value is presented for the target value
     if(target > nums[ nums.size() - 1]) return -1;
 
     int start = 0;
@@ -26,9 +26,9 @@ int ceiling(vector<int> &nums, int target)
             end = mid - 1;
     }
 
-    // at the end of while loop start becomes greater than the end value
+    // at the end of while loop 'start' becomes greater than the 'end' value
     // and since target is not presented in the array we'll return the next large number
-    // which is currently is locating at the start position.
+    // which is currently is locating at the 'start' position.
     return start;
 }
 
