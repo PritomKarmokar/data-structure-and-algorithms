@@ -3,6 +3,7 @@
     01. Inserting at the head node.
     02. Inserting at the last node (2 approaches).
     03. Inserting at a given index.
+    04. Inserting a node after a given node.
 */
 
 #include<bits/stdc++.h>
@@ -113,7 +114,7 @@ public:
 
         // Inserting at the head
         if(index == 0){
-            cout << "Ok before prepend" << endl;
+            // cout << "Ok before prepend" << endl;
             prepend(val);
             return;
         }
@@ -143,6 +144,48 @@ public:
 
     }
 
+
+    // Utility function for adding an item after a given node
+    void insertAfterNode(int nodeVal , int val)
+    {
+        Node *temp = searchByValue(nodeVal);
+
+        if(temp == NULL){
+            cout << "The " << nodeVal << " is not presented in the linked list" << endl;
+            return;
+        }
+
+        cout << "Inserting " << val << " after node " << nodeVal << endl;
+
+        Node *node = new Node(val);
+        Node *prev_node = temp;
+        Node *next_node = prev_node->next;
+
+        prev_node->next = node;
+        node->prev = prev_node;
+
+        if(next_node != NULL){      // In the case when we're adding a node after the last node, then we need to handle 'NULL pointer' exception
+            next_node->prev = node;
+            node->next = next_node;
+        }
+    }
+
+
+    // Utility function for searching an item based on the value
+    Node *searchByValue(int val)
+    {
+        Node *cur = head;
+
+        while(cur != NULL){
+            if(cur->val == val){    // If the 'val' of the node is present then return it
+                return cur;
+            }
+            cur = cur->next;
+        }
+
+        return NULL;
+    }
+
     //Utility function for searching a node based on the index
     Node *searchByIndex(int index)
     {   
@@ -153,7 +196,7 @@ public:
         Node *temp = head;
 
         for(int i = 0; i < index; i++){
-            //cout << temp->val << " ";
+            // cout << temp->val << " ";
             temp = temp->next;
         }
         cout << endl;
@@ -237,7 +280,7 @@ public:
 int main()
 {   
     doubLinkedList *d1 = new doubLinkedList();
-    int value, index;
+    int value, index, nodeVal;
 
     // Inserting value '10' at the head node
     value = 10;
@@ -279,5 +322,34 @@ int main()
     d1->displayList();
 
 
+    
+    // Node *n = d1->searchByIndex(4);
+    // if(n == NULL) cout << "Index is out of range" << endl;
+    // else cout << n->val << endl;
+    // value = 50;
+    // Node *node = d1->searchByValue(value);
+    // if(node == NULL){
+    //     cout << "node is not presented in the linked list" << endl;
+    // }
+    // else cout << "node is presented in the linked list" << endl;
+
+
+    // Inserting '50' after node '10'
+    value = 50;
+    nodeVal = 10;
+    d1->insertAfterNode(nodeVal, value);
+    d1->displayHead();
+    d1->displayTail();
+    d1->displayList();
+
+
+    // Inserting '60' after node '30'
+    value = 60;
+    nodeVal = 30;
+    d1->insertAfterNode(nodeVal, value);
+    d1->displayHead();
+    d1->displayTail();
+    d1->displayList();
+    
     return 0;
 }
