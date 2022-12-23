@@ -289,10 +289,6 @@ int main()
     d1->displayTail();
     d1->displayList();
 
-    // int size = d1->displaySize();
-
-    // cout << "Size of the linked list : " << size << endl;
-
     // Inserting value '20' at the starting of the linked list
     value = 20;
     d1->prepend(value);
@@ -320,18 +316,6 @@ int main()
     d1->displayHead();
     d1->displayTail();
     d1->displayList();
-
-
-    
-    // Node *n = d1->searchByIndex(4);
-    // if(n == NULL) cout << "Index is out of range" << endl;
-    // else cout << n->val << endl;
-    // value = 50;
-    // Node *node = d1->searchByValue(value);
-    // if(node == NULL){
-    //     cout << "node is not presented in the linked list" << endl;
-    // }
-    // else cout << "node is presented in the linked list" << endl;
 
 
     // Inserting '50' after node '10'
