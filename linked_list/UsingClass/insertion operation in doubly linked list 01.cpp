@@ -153,7 +153,7 @@ public:
         Node *temp = head;
 
         for(int i = 0; i < index; i++){
-            cout << temp->val << " ";
+            //cout << temp->val << " ";
             temp = temp->next;
         }
         cout << endl;
