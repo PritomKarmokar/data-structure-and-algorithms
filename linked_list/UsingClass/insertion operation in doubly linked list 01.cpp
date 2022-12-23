@@ -142,6 +142,7 @@ public:
         node->next = next_node;
         next_node->prev = node;
 
+        size += 1;
     }
 
 
@@ -168,6 +169,8 @@ public:
             next_node->prev = node;
             node->next = next_node;
         }
+
+        size += 1;
     }
 
 
