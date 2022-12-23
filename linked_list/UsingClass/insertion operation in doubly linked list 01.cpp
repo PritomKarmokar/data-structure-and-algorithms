@@ -2,6 +2,7 @@
     Insertion operation in doubly linked list
     01. Inserting at the head node.
     02. Inserting at the last node (2 approaches).
+    03. Inserting at a given index.
 */
 
 #include<bits/stdc++.h>
@@ -105,6 +106,61 @@ public:
         // In this 'tail' node will be the same as previous cause we're assuming 'tail' is not given to us
     }
 
+    // Utility function for inserting an item at the given index
+    void insertAtIndex(int val, int index)
+    {   
+        cout << "Inserting " << val << " at the index " << index <<endl;
+
+        // Inserting at the head
+        if(index == 0){
+            cout << "Ok before prepend" << endl;
+            prepend(val);
+            return;
+        }
+
+        // Inserting at the end
+        if(index == size){
+            insertLast(val);
+            return;
+        }   
+
+        Node *node = new Node(val);
+
+        Node *temp = head;
+        //cout << "cur temp->head = " << temp->val << endl;
+        for(int i = 1; i < index; i++){
+            temp = temp->next;
+        }
+
+        Node *prev_node = temp;
+        Node *next_node = prev_node->next;
+
+        // Now adding pointer to these nodes
+        prev_node->next = node;
+        node->prev = prev_node;
+        node->next = next_node;
+        next_node->prev = node;
+
+    }
+
+    //Utility function for searching a node based on the index
+    Node *searchByIndex(int index)
+    {   
+        if(index > Size()){
+            return NULL;
+        }
+
+        Node *temp = head;
+
+        for(int i = 0; i < index; i++){
+            cout << temp->val << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+
+        return temp;
+    }
+
     // Utility function for displaying the values of the doubly linked list
     void displayList()
     {
@@ -172,7 +228,7 @@ public:
     }
 
     // Utility function returning the size of the linked list.
-    int displaySize()
+    int Size()
     {
         return size;
     }
@@ -181,7 +237,7 @@ public:
 int main()
 {   
     doubLinkedList *d1 = new doubLinkedList();
-    int value;
+    int value, index;
 
     // Inserting value '10' at the head node
     value = 10;
@@ -189,10 +245,10 @@ int main()
     d1->displayHead();
     d1->displayTail();
     d1->displayList();
+
     // int size = d1->displaySize();
 
     // cout << "Size of the linked list : " << size << endl;
-    // d1->append(10);
 
     // Inserting value '20' at the starting of the linked list
     value = 20;
@@ -200,13 +256,28 @@ int main()
     d1->displayHead();
     d1->displayTail();
     d1->displayList();
-    d1->displayListRev();
 
+
+    // Inserting value '30' at the end of the linked list
     value = 30;
     d1->insertLast(value);
+    d1->displayListRev();
     d1->displayHead();
     d1->displayTail();
     d1->displayList();
+
+    int length = d1->Size();  
+    cout << "Length of the linked list : " << length << endl;  
+    d1->displayList();
+
+    // Inserting value '40' at the index 2
+    value = 40;
+    index = 2;
+    d1->insertAtIndex(value, index);
+    d1->displayHead();
+    d1->displayTail();
+    d1->displayList();
+
 
     return 0;
 }
