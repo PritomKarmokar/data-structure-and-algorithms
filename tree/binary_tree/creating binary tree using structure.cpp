@@ -1,32 +1,22 @@
-/*  Tree Structure for the program :
-     _ 2 _
-     /   \
-    7     9
-   / \     \
-  1  6     8
-    / \   / \
-   5   10 3  4
-
-*/
-
 #include<bits/stdc++.h>
 typedef struct node Node;
 
 using namespace std;
 
+// Declaring a structure for defining 'node' of the 'tree' data structure
 struct node{
     int data;
     Node *left;
     Node *right;
 };
 
-// Function for creating a new node
+// Function for creating a node in the 'tree' data structure
 Node *create_node(int item)
 {
     Node *new_node = new Node();
 
     if(new_node == NULL){
-        cout << "Error! Could Not Create A New Node\n";
+        cout << "ERRPR! Could not create a new node" << endl;
         exit(1);
     }
 
@@ -37,16 +27,30 @@ Node *create_node(int item)
     return new_node;
 }
 
-// Function for adding left child of a node
+// Function for adding left child
 void add_left_child(Node *node, Node *child)
 {
     node->left = child;
 }
 
+// Function for adding right child
 void add_right_child(Node *node, Node *child)
 {
     node->right = child;
 }
+
+/*  
+    Tree Structure for 'create_tree' function :
+
+     _ 2 _
+     /   \
+    7     9
+   / \     \
+  1  6     8
+    / \   / \
+   5   10 3  4
+
+*/
 
 Node *create_tree()
 {
@@ -74,7 +78,7 @@ Node *create_tree()
     add_left_child(eight, three);
     add_right_child(eight, four);
 
-    // Returning the head of the tree.
+    // Returning the 'root' node
     return two;
 }
 
