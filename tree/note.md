@@ -7,5 +7,7 @@
 ![tree_structure](https://user-images.githubusercontent.com/71670082/214832144-158f078d-e1a6-4cf4-a4c8-2f5fe5f244bb.png)
 
 ## Binary Tree
- * In these type of tree a node can only contain maximum two child nodes.
- * Since, Binary tree only can contain 2 child nodes, left sided child is known as left child or left node and right sided child is known as right child or right node. 
+ * In these type of tree a node can only contain maximum two child nodes
+ * Since, Binary tree only can contain 2 child nodes, left sided child is known as left child or left node and right sided child is known as right child or right node 
+
+![binary_tree](https://user-images.githubusercontent.com/71670082/214845355-b1eb9716-3df8-4f76-b7a9-a9cdcef3c4d4.png)
