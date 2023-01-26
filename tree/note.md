@@ -49,7 +49,7 @@ void pre_order(Node *node)
 
 ![post_order](https://user-images.githubusercontent.com/71670082/214857627-4f02682e-e44e-4c59-94d0-48f3ff7504db.png)
 
-Source code:
+Source code :
 
 ```
 void post_order(Node *node)
@@ -67,4 +67,25 @@ void post_order(Node *node)
 ```
 
 ### In-order traversal
+ * In this approach, we'll first traverse the left subtree using in-order approach, then visit the root node and after that we'll traverse the right subtree using the same approach
+
+
 ![in_order](https://user-images.githubusercontent.com/71670082/214858011-7e4ecc99-0ddb-4ca6-806b-4668e1792507.png)
+
+Source code :
+```
+void in_order(Node *node)
+{
+    if(node->left != NULL){
+        in_order(node->left);
+    }
+
+    cout << node->data << " ";
+
+    if(node->right != NULL){
+        in_order(node->right);
+    }
+}
+```
+
+### Example Problem
