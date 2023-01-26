@@ -24,3 +24,41 @@
  * In this way, we'll first visit the root node. Then traverse the left subtree using pre-order traversal approach and after that traverse the right subtree using pre-order traversal way.
 
 ![pre_order](https://user-images.githubusercontent.com/71670082/214854345-126330ab-b3de-4a85-9c4f-e6882ff5a0c9.png)
+
+
+Source code :
+
+```
+void pre_order(Node *node)
+{
+    cout << node->data << " ";
+
+    if(node->left != NULL){
+        pre_ordr(node->left);
+    }
+
+    if(node->right != NULL){
+        pre_order(node->right);
+    }
+}
+```
+
+### Post-order traversal
+ * In this approach, we'll first traverse left subtree using post-order approach, then traverse right subtree using the same approach and finally visit the root node.
+
+Source code:
+
+```
+void post_order(Node *node)
+{
+    if(node->left != NULL){
+        post_order(node->left);
+    }
+
+    if(node->right != NULL){
+        post_order(node->right);
+    }
+
+    cout << node->data << " "; 
+}
+```
