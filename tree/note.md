@@ -89,3 +89,5 @@ void in_order(Node *node)
 ```
 
 ### Example Problem
+
+![example](https://user-images.githubusercontent.com/71670082/214861254-1d730204-a14b-4424-b9f7-9cf592bc901b.png)
