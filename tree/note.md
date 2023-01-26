@@ -46,6 +46,9 @@ void pre_order(Node *node)
 ### Post-order traversal
  * In this approach, we'll first traverse left subtree using post-order approach, then traverse right subtree using the same approach and finally visit the root node.
 
+
+![post_order](https://user-images.githubusercontent.com/71670082/214857627-4f02682e-e44e-4c59-94d0-48f3ff7504db.png)
+
 Source code:
 
 ```
@@ -62,3 +65,6 @@ void post_order(Node *node)
     cout << node->data << " "; 
 }
 ```
+
+### In-order traversal
+![in_order](https://user-images.githubusercontent.com/71670082/214858011-7e4ecc99-0ddb-4ca6-806b-4668e1792507.png)
