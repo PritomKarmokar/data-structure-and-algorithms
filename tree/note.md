@@ -5,3 +5,7 @@
  * In the below tree, 5, 10, 19, 6, 3, 4 and 1 these nodes have no child. That's why they are known as leaf node
  
 ![tree_structure](https://user-images.githubusercontent.com/71670082/214832144-158f078d-e1a6-4cf4-a4c8-2f5fe5f244bb.png)
+
+## Binary Tree
+ * In these type of tree a node can only contain maximum two child nodes.
+ * Since, Binary tree only can contain 2 child nodes, left sided child is known as left child or left node and right sided child is known as right child or right node. 
