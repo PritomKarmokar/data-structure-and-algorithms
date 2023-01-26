@@ -11,3 +11,5 @@
  * Since, Binary tree only can contain 2 child nodes, left sided child is known as left child or left node and right sided child is known as right child or right node 
 
 ![binary_tree](https://user-images.githubusercontent.com/71670082/214847512-4f4ad81f-af38-4061-a1ec-862491276c1a.png)
+
+ * Height of binary Tree : It is defined as the maximum depth of any leaf node from the root node.
