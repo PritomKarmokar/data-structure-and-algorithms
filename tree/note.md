@@ -22,3 +22,5 @@
 
 ### Pre-order traversal
  * In this way, we'll first visit the root node. Then traverse the left subtree using pre-order traversal approach and after that traverse the right subtree using pre-order traversal way.
+
+![pre_order](https://user-images.githubusercontent.com/71670082/214854345-126330ab-b3de-4a85-9c4f-e6882ff5a0c9.png)
