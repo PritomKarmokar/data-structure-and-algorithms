@@ -13,3 +13,12 @@
 ![binary_tree](https://user-images.githubusercontent.com/71670082/214847512-4f4ad81f-af38-4061-a1ec-862491276c1a.png)
 
  * Height of binary Tree : It is defined as the maximum depth of any leaf node from the root node.
+
+## Tree Traversing
+ * There are mainly 03 algoriths for tree traversing :
+  01. Pre-order
+  02. Post-order
+  03. In-order
+
+### Pre-order traversal
+ * In this way, we'll first visit the root node. Then traverse the left subtree using pre-order traversal approach and after that traverse the right subtree using pre-order traversal way.
