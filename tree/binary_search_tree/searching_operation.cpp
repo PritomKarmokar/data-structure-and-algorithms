@@ -113,6 +113,27 @@ void in_order(Node *node)
     }
 }
 
+// Function for searching an element in the binary search tree
+Node *bst_search(Node *root, int item)
+{
+    Node *node = root;
+
+    while(node != NULL){
+        if(node->data == item)
+        {
+            return node;
+        }
+
+        if(item < node->data){
+            node = node->left;
+        }
+        else{
+            node = node->right;
+        }
+    }
+
+    return node;
+}
 
 int main()
 {
@@ -124,6 +145,31 @@ int main()
 
     cout << endl;
 
+    int value;
 
+    value = 7;
+
+    Node *node;
+
+    node = bst_search(root, value);
+
+    if(node != NULL){
+        cout << node->data << endl;
+    }
+    else{
+        cout << "Node not found" << endl;
+    }
+
+    value = 8;
+
+    node = bst_search(root, value);
+
+    if(node != NULL){
+        cout << node->data << endl;
+    }
+    else{
+        cout << "Node not found" << endl;
+    }
+    
     return 0;
 }
